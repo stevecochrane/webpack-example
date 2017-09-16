@@ -6,10 +6,7 @@ const PATHS = {
 	build: path.join(__dirname, "build")
 };
 
-module.exports = {
-	//	Entries have to resolve to files! They rely on Node
-	//	convention by default so if a directory contains *index.js*,
-	//	it resolves to that.
+const commonConfig = {
 	entry: {
 		app: PATHS.app
 	},
@@ -22,4 +19,10 @@ module.exports = {
 			title: "Webpack demo"
 		})
 	]
+};
+
+module.exports = (env) => {
+	console.log("env", env);
+
+	return commonConfig;
 };
