@@ -7,7 +7,15 @@ module.exports = ({ include, exclude } = {}) => ({
 				exclude,
 				use: [
 					"style-loader",
-					"css-loader"
+					"css-loader",
+					{
+						loader: "postcss-loader",
+						options: {
+							plugins: () => ([
+								require("autoprefixer")
+							])
+						}
+					}
 				]
 			}
 		]
