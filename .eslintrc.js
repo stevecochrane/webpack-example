@@ -8,5 +8,9 @@ module.exports = {
 	extends: "eslint:recommended",
 	parserOptions: {
 		sourceType: "module"
+	},
+	rules: {
+		quotes: ["error", "double"],
+		semi: ["error", "always"]
 	}
 };
