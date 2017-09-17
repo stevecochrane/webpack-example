@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:js" : "eslint --cache",
+    "lint:js": "eslint --ignore-path .eslintignore --cache .",
     "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --env development\"",
     "build": "webpack --env production"
   },
@@ -13,6 +13,11 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^4.7.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "html-webpack-plugin": "^2.30.1",
     "nodemon": "^1.12.1",
     "webpack": "^3.6.0",
