@@ -43,7 +43,12 @@ const developmentConfig = () => {
 			host: process.env.HOST,
 
 			//	Defaults to 8080
-			port: process.env.PORT
+			port: process.env.PORT,
+
+			overlay: {
+				errors: true,
+				warnings: true
+			}
 		},
 		module: {
 			rules: [
