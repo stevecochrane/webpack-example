@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint:js": "eslint --ignore-path .eslintignore --cache .",
-    "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --env development\"",
-    "build": "webpack --env production"
+    "start": "nodemon --watch webpack --exec \"webpack-dev-server --config webpack/development.js\"",
+    "build": "webpack --config webpack/production.js"
   },
   "keywords": [],
   "author": "",
