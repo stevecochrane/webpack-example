@@ -44,6 +44,19 @@ const developmentConfig = () => {
 
 			//	Defaults to 8080
 			port: process.env.PORT
+		},
+		module: {
+			rules: [
+				{
+					test: /\.js$/,
+					exclude: /node_modules/,
+					enforce: "pre",
+					loader: "eslint-loader",
+					options: {
+						emitWarning: true
+					}
+				}
+			]
 		}
 	};
 
