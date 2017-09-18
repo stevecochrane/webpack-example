@@ -10,7 +10,7 @@ module.exports = ({ include, exclude, use }) => {
 		module: {
 			rules: [
 				{
-					test: /\.css$?/,
+					test: /\.css$/,
 					include,
 					exclude,
 					use: plugin.extract({
