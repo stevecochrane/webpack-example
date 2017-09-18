@@ -1,3 +1,5 @@
+const autoprefix = require("./autoprefix");
+
 module.exports = ({ include, exclude } = {}) => ({
 	module: {
 		rules: [
@@ -8,14 +10,7 @@ module.exports = ({ include, exclude } = {}) => ({
 				use: [
 					"style-loader",
 					"css-loader",
-					{
-						loader: "postcss-loader",
-						options: {
-							plugins: () => ([
-								require("autoprefixer")
-							])
-						}
-					}
+					autoprefix()
 				]
 			}
 		]
