@@ -95,7 +95,7 @@ document.body.appendChild(Object(__WEBPACK_IMPORTED_MODULE_0__component__["a" /*
 /* 2 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: No PostCSS Config found in: /Users/stevecochrane/Documents/Projects/webpack-example/app\n    at Error (native)\n    at /Users/stevecochrane/Documents/Projects/webpack-example/node_modules/postcss-load-config/index.js:51:26\n    at runLoaders (/Users/stevecochrane/Documents/Projects/webpack-example/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/stevecochrane/Documents/Projects/webpack-example/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/stevecochrane/Documents/Projects/webpack-example/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/stevecochrane/Documents/Projects/webpack-example/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Promise.resolve.then.then.catch (/Users/stevecochrane/Documents/Projects/webpack-example/node_modules/postcss-loader/lib/index.js:176:71)");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
