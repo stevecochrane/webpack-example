@@ -22,6 +22,5 @@ module.exports = merge([
 	},
 	lintJavaScript({
 		include: paths.app
-	}),
-	loadCSS()
+	})
 ]);
