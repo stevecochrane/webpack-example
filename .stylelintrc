@@ -5,7 +5,7 @@
 		"color-named": "never",
 		"color-no-invalid-hex": true,
 
-		"font-family-name-quotes": "double-unless-keyword",
+		"font-family-name-quotes": "always-unless-keyword",
 		"font-weight-notation": "numeric",
 
 		"function-calc-no-unspaced-operator": true,
@@ -13,7 +13,7 @@
 		"function-comma-space-before": "never",
 		"function-linear-gradient-no-nonstandard-direction": true,
 		"function-name-case": "lower",
-		"function-url-quotes": "double",
+		"function-url-quotes": "always",
 
 		"number-leading-zero": "always",
 
