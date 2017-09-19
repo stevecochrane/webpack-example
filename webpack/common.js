@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const merge             = require("webpack-merge");
 
+const lintCSS        = require("./parts/lintCSS");
 const lintJavaScript = require("./parts/lintJavaScript");
 const loadCSS        = require("./parts/loadCSS");
 const paths          = require("./parts/paths");
@@ -21,6 +22,9 @@ module.exports = merge([
 		]
 	},
 	lintJavaScript({
+		include: paths.app
+	}),
+	lintCSS({
 		include: paths.app
 	})
 ]);
