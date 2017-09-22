@@ -5,6 +5,7 @@ const lintCSS        = require("./parts/lintCSS");
 const lintJavaScript = require("./parts/lintJavaScript");
 const loadCSS        = require("./parts/loadCSS");
 const loadFonts      = require("./parts/loadFonts");
+const loadJavaScript = require("./parts/loadJavaScript");
 const paths          = require("./parts/paths");
 
 module.exports = merge([
