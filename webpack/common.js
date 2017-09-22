@@ -26,5 +26,10 @@ module.exports = merge([
 	}),
 	lintCSS({
 		include: paths.app
+	}),
+	loadFonts({
+		options: {
+			name: "[name].[ext]"
+		}
 	})
 ]);
