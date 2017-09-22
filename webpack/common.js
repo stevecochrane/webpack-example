@@ -31,5 +31,8 @@ module.exports = merge([
 		options: {
 			name: "[name].[ext]"
 		}
+	}),
+	loadJavaScript({
+		include: paths.app
 	})
 ]);
