@@ -3,6 +3,7 @@ const merge = require("webpack-merge");
 const commonConfig = require("./common");
 const devServer    = require("./parts/devServer");
 const loadCSS      = require("./parts/loadCSS");
+const loadImages   = require("./parts/loadImages");
 
 const developmentConfig = merge([
 	devServer({
@@ -10,7 +11,8 @@ const developmentConfig = merge([
 		host: process.env.HOST,
 		port: process.env.PORT
 	}),
-	loadCSS()
+	loadCSS(),
+	loadImages()
 ]);
 
 module.exports = merge(commonConfig, developmentConfig);
