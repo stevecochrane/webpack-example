@@ -1,4 +1,7 @@
 body {
 	background: #eee;
+	background-image: url("./blue-gradient-100.png");
+	background-repeat: no-repeat;
+	background-position: center;
 	transition: all 0.2s;
 }
