@@ -2,13 +2,16 @@ const merge   = require("webpack-merge");
 const webpack = require("webpack");
 
 const autoprefix         = require("./parts/autoprefix");
+const clean              = require("./parts/clean");
 const commonConfig       = require("./common");
 const extractBundles     = require("./parts/extractBundles");
 const extractCSS         = require("./parts/extractCSS");
 const generateSourceMaps = require("./parts/generateSourceMaps");
 const loadImages         = require("./parts/loadImages");
+const paths              = require("./parts/paths");
 
 const productionConfig = merge([
+	clean(paths.build),
 	extractBundles([
 		{
 			name: "vendor",
