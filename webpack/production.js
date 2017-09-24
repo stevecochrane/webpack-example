@@ -9,14 +9,14 @@ const generateSourceMaps = require("./parts/generateSourceMaps");
 const loadImages         = require("./parts/loadImages");
 
 const productionConfig = merge([
-	{
-		entry: {
-			vendor: ["react"]
-		}
-	},
 	extractBundles([
 		{
-			name: "vendor"
+			name: "vendor",
+			minChunks: ({ resource }) => (
+				resource &&
+				resource.indexOf("node_modules") >= 0 &&
+				resource.match(/\.js$/)
+			)
 		}
 	]),
 	generateSourceMaps({

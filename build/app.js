@@ -1,12 +1,12 @@
 webpackJsonp([0],{
 
-/***/ 19:
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(11);
+__webpack_require__(19);
 
 var _component = __webpack_require__(37);
 
@@ -47,5 +47,5 @@ exports.default = function () {
 
 /***/ })
 
-},[19]);
+},[18]);
 //# sourceMappingURL=app.js.map
