@@ -91,8 +91,10 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-exports.default = (text = "Hello world") => {
-	const element = document.createElement("div");
+exports.default = function () {
+	var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Hello world";
+
+	var element = document.createElement("div");
 	element.innerHTML = text;
 	return element;
 };
@@ -105,3 +107,4 @@ exports.default = (text = "Hello world") => {
 
 /***/ })
 /******/ ]);
+//# sourceMappingURL=app.js.map
