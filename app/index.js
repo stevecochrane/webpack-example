@@ -1,3 +1,4 @@
+import "react";
 import component from "./component";
 
 import "./main.css";

@@ -1,4 +1,5 @@
-const merge = require("webpack-merge");
+const merge   = require("webpack-merge");
+const webpack = require("webpack");
 
 const autoprefix         = require("./parts/autoprefix");
 const commonConfig       = require("./common");
@@ -7,6 +8,16 @@ const generateSourceMaps = require("./parts/generateSourceMaps");
 const loadImages         = require("./parts/loadImages");
 
 const productionConfig = merge([
+	{
+		entry: {
+			vendor: ["react"]
+		},
+		plugins: [
+			new webpack.optimize.CommonsChunkPlugin({
+				name: "vendor"
+			})
+		]
+	},
 	generateSourceMaps({
 		type: "source-map"
 	}),
