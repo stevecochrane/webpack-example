@@ -1,4 +1,4 @@
-webpackJsonp([0],{
+webpackJsonp([1],{
 
 /***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
@@ -35,6 +35,11 @@ exports.default = function () {
 
 	var element = document.createElement("div");
 	element.innerHTML = text;
+	element.onClick = function () {
+		__webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 40)).then(function (lazy) {
+			element.textContent = lazy.default;
+		});
+	};
 	return element;
 };
 

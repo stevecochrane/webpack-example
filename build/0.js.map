@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./app/lazy.js"],"names":[],"mappings":";;;;;;;;;;;kBAAe,iB","file":"0.js","sourcesContent":["export default \"Hello from lazy\";\n\n\n\n// WEBPACK FOOTER //\n// ./app/lazy.js"],"sourceRoot":""}
