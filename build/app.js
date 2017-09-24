@@ -12,7 +12,7 @@ var _component = __webpack_require__(37);
 
 var _component2 = _interopRequireDefault(_component);
 
-__webpack_require__(38);
+__webpack_require__(39);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35,7 +35,7 @@ exports.default = function () {
 
 	var element = document.createElement("div");
 	element.innerHTML = text;
-	element.onClick = function () {
+	element.onclick = function () {
 		__webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 40)).then(function (lazy) {
 			element.textContent = lazy.default;
 		});
@@ -45,7 +45,7 @@ exports.default = function () {
 
 /***/ }),
 
-/***/ 38:
+/***/ 39:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
