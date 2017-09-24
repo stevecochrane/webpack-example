@@ -1,6 +1,7 @@
 const merge   = require("webpack-merge");
 const webpack = require("webpack");
 
+const attachRevision     = require("./parts/attachRevision");
 const autoprefix         = require("./parts/autoprefix");
 const clean              = require("./parts/clean");
 const commonConfig       = require("./common");
@@ -36,7 +37,8 @@ const productionConfig = merge([
 			limit: 15000,
 			name: "[name].[ext]"
 		}
-	})
+	}),
+	attachRevision()
 ]);
 
 module.exports = merge(commonConfig, productionConfig);
