@@ -9,6 +9,7 @@ const extractBundles     = require("./parts/extractBundles");
 const extractCSS         = require("./parts/extractCSS");
 const generateSourceMaps = require("./parts/generateSourceMaps");
 const loadImages         = require("./parts/loadImages");
+const minifyCSS          = require("./parts/minifyCSS");
 const minifyJavaScript   = require("./parts/minifyJavaScript");
 const paths              = require("./parts/paths");
 
@@ -22,6 +23,14 @@ const productionConfig = merge([
 	},
 	clean(paths.build),
 	minifyJavaScript(),
+	minifyCSS({
+		options: {
+			discardComments: {
+				removeAll: true
+			},
+			safe: true
+		}
+	}),
 	extractBundles([
 		{
 			name: "vendor",
