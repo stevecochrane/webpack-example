@@ -12,6 +12,7 @@ const loadImages         = require("./parts/loadImages");
 const minifyCSS          = require("./parts/minifyCSS");
 const minifyJavaScript   = require("./parts/minifyJavaScript");
 const paths              = require("./parts/paths");
+const setFreeVariable    = require("./parts/setFreeVariable");
 
 const productionConfig = merge([
 	{
@@ -56,7 +57,11 @@ const productionConfig = merge([
 			name: "[name].[ext]"
 		}
 	}),
-	attachRevision()
+	attachRevision(),
+	setFreeVariable(
+		"process.env.NODE_ENV",
+		"production"
+	)
 ]);
 
 module.exports = merge(commonConfig, productionConfig);
