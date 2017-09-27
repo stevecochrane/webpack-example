@@ -9,6 +9,7 @@ const extractBundles     = require("./parts/extractBundles");
 const extractCSS         = require("./parts/extractCSS");
 const generateSourceMaps = require("./parts/generateSourceMaps");
 const loadImages         = require("./parts/loadImages");
+const minifyJavaScript   = require("./parts/minifyJavaScript");
 const paths              = require("./parts/paths");
 
 const productionConfig = merge([
@@ -20,6 +21,7 @@ const productionConfig = merge([
 		}
 	},
 	clean(paths.build),
+	minifyJavaScript(),
 	extractBundles([
 		{
 			name: "vendor",
