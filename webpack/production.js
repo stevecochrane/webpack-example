@@ -12,6 +12,13 @@ const loadImages         = require("./parts/loadImages");
 const paths              = require("./parts/paths");
 
 const productionConfig = merge([
+	{
+		performance: {
+			hints: "warning",
+			maxEntrypointSize: 100000,
+			maxAssetSize: 450000
+		}
+	},
 	clean(paths.build),
 	extractBundles([
 		{
