@@ -3,7 +3,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = ({ include, exclude, use }) => {
 	//	Output extracted CSS to a file
 	const plugin = new ExtractTextPlugin({
-		filename: "[name].css"
+		filename: "[name].[contenthash].css"
 	});
 
 	return {

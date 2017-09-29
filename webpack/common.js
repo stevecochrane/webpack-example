@@ -31,7 +31,7 @@ module.exports = merge([
 	}),
 	loadFonts({
 		options: {
-			name: "[name].[ext]"
+			name: "[name].[hash].[ext]"
 		}
 	}),
 	loadJavaScript({

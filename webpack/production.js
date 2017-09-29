@@ -16,6 +16,10 @@ const setFreeVariable    = require("./parts/setFreeVariable");
 
 const productionConfig = merge([
 	{
+		output: {
+			chunkFilename: "[name].[chunkhash].js",
+			filename: "[name].[chunkhash].js"
+		},
 		performance: {
 			hints: "warning",
 			maxEntrypointSize: 100000,
@@ -54,7 +58,7 @@ const productionConfig = merge([
 	loadImages({
 		options: {
 			limit: 15000,
-			name: "[name].[ext]"
+			name: "[name].[hash].[ext]"
 		}
 	}),
 	attachRevision(),
