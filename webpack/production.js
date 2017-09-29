@@ -47,6 +47,10 @@ const productionConfig = merge([
 				resource.indexOf("node_modules") >= 0 &&
 				resource.match(/\.js$/)
 			)
+		},
+		{
+			name: "manifest",
+			minChunks: Infinity
 		}
 	]),
 	generateSourceMaps({
