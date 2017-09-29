@@ -24,7 +24,10 @@ const productionConfig = merge([
 			hints: "warning",
 			maxEntrypointSize: 100000,
 			maxAssetSize: 450000
-		}
+		},
+		plugins: [
+			new webpack.HashedModuleIdsPlugin()
+		]
 	},
 	clean(paths.build),
 	minifyJavaScript(),
