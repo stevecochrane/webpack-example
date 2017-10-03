@@ -7,7 +7,8 @@
     "build": "webpack --config webpack/production.js",
     "lint:css": "stylelint app/**/*.css",
     "lint:js": "eslint --ignore-path .eslintignore --cache .",
-    "start": "nodemon --watch webpack --exec \"webpack-dev-server --config webpack/development.js\""
+    "start": "nodemon --watch webpack --exec \"webpack-dev-server --config webpack/development.js\"",
+    "stats": "webpack --config webpack/production.js --profile --json > webpack/stats.json"
   },
   "keywords": [],
   "author": "",
