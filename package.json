@@ -1,8 +1,13 @@
 {
   "name": "webpack-example",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Modified Webpack configuration code from the book SurviveJS - Webpack.",
+  "author": "Steve Cochrane <steve@stevecochrane.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevecochrane/webpack-example.git"
+  },
   "scripts": {
     "build": "webpack --config webpack/production.js",
     "lint:css": "stylelint app/**/*.css",
@@ -10,9 +15,6 @@
     "start": "nodemon --watch webpack --exec \"webpack-dev-server --config webpack/development.js\"",
     "stats": "webpack --config webpack/production.js --profile --json > webpack/stats.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.26.0",
